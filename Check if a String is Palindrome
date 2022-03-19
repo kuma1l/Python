@@ -1,0 +1,18 @@
+def checkPalindrome(string):
+    flag=True
+    start=0
+    end=len(string)-1
+    loop=(len(string))/2
+    while(start<=end):
+        if(string[start]!=string[end]):
+            flag =False
+            break
+        start+=1
+        end-=1
+    return flag
+string=input("Enter String: ")
+isPal=checkPalindrome(string)
+if isPal==True:
+    print(string, "is Palindrome")
+else:
+    print(string, "is not Palindrome")
