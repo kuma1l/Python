@@ -1,0 +1,15 @@
+vowels=['a','e','i','o','u']
+string=input()
+print("Characters in String ")
+for i in range(0,len(string)):
+    print(string[i])
+print("Number of Characters in String:", len(string))
+print("Vowels in String")
+occ=0
+for i in range(0, len(string)):
+    for j in range (0, len(vowels)):
+        if string[i]==vowels[j]:
+            print(string[i])
+            occ+=1
+            break
+print("Numbers of Vowels in String:",occ )
