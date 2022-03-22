@@ -1,0 +1,5 @@
+x=60
+print ("KPH\tMPH")
+for i in range(x,331,5):
+    p=i
+    print(i,"\t",p*.6214)
