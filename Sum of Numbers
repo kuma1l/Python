@@ -1,0 +1,11 @@
+x=-1
+while x<0:
+    x=int(input("Enter Positive Number: "))
+    if x<0:
+        print("Enter the Number again")
+    else:
+        break
+sum=0
+for i in range(0,x+1):
+    sum+=i
+print ("Sum is: ",sum)
