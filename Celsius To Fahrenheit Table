@@ -1,0 +1,4 @@
+print ("Celsius\tFahrenheit")
+for i in range(0, 21):
+    p=i
+    print(i,"\t",(p*(9/5))+32)
