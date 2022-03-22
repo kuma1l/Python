@@ -1,0 +1,4 @@
+for i in range(32, 128):
+    p=i
+    p=chr(p)
+    print(p)
