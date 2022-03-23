@@ -1,0 +1,30 @@
+choice=0
+while(choice!='n'):
+    print("Enter 1 Value: ")
+    pounds=0
+    shilings=0
+    pence=0
+    pounds=int(input())
+    shillings=int(input())
+    pence=int(input())
+    pounds1=0
+    shilings1=0
+    print("Enter 2 Value: ")
+    pence1=0
+    pounds1=int(input())
+    shillings1=int(input())
+    pence1=int(input())
+    pounds+=pounds1
+    shillings+=shillings1
+    pence+=pence1
+    if shillings>=19:
+        while(shillings>19):
+            shillings=shillings-19
+            pounds+=1
+    if pence>=11:
+        while(pence>11):
+            pence=pence-11
+            shillings+=1
+
+    print("$ ",pounds,shillings,pence)
+    choice=input("y/n")
