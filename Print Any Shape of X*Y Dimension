@@ -1,0 +1,7 @@
+rows=int (input("Enter Rows: "))
+col=int (input("Enter Columns: "))
+
+for i in range (0, rows):
+    for j in range (0, col):
+        print("*",end=" ")
+    print("\n")
