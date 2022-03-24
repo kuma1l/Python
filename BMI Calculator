@@ -1,0 +1,19 @@
+weight=-1
+height=-1
+while weight<0:
+    weight=float(input("Enter Your Weight(lbs): "))
+    if weight<0:
+        print("Enter A Positive Value")
+while height<0:
+    height=float(input("Enter Your Height(in): "))
+    if height<0:
+        print("Enter A Positive Value")
+
+BMI=(weight*703)/(height*height)
+print(BMI)
+if BMI<18.5:
+    print("Underweight")
+elif BMI>18.5 and BMI<25:
+    print("Optimal")
+else:
+    print("OverWeight")
