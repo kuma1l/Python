@@ -1,0 +1,13 @@
+num=int(input("Enter Number: "))
+flag=True
+temp=num
+while(num!=0):
+    p=num%10
+    num=num//10
+    if p%2!=0:
+        flag=False
+        break
+if flag==True:
+    print(temp)
+else:
+    print("Number Contains Odd digit(s)")
