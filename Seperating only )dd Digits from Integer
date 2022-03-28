@@ -1,0 +1,6 @@
+num=int(input("Enter Number: "))
+while(num!=0):
+    p=num%10
+    num=num//10
+    if p %2!=0:
+        print(p)
