@@ -1,0 +1,26 @@
+import pandas as pd
+import numpy as np
+
+
+df=pd.read_csv("auto.csv")
+headers = ["symboling","normalized-losses","make","fuel-type","aspiration", "num-of-doors","body-style",
+         "drive-wheels","engine-location","wheel-base", "length","width","height","curb-weight","engine-type",
+         "num-of-cylinders", "engine-size","fuel-system","bore","stroke","compression-ratio","horsepower",
+         "peak-rpm","city-mpg","highway-mpg","price"]
+df.columns=headers
+df=df.replace("?",np.nan)
+m=df['normalized-losses'].astype('float').mean()
+df['normalized-losses']=df['normalized-losses'].replace(np.nan,m)
+m=df['num-of-doors'].value_counts().idxmax()
+df['num-of-doors']=df['num-of-doors'].replace(np.nan,m)
+m=df['bore'].astype('float').mean()
+df['bore']=df['bore'].replace(np.nan,m)
+m=df['stroke'].astype('float').mean()
+df['stroke']=df['stroke'].replace(np.nan,m)
+m=df['horsepower'].astype('float').mean()
+df['horsepower']=df['horsepower'].replace(np.nan,m)
+m=df['peak-rpm'].astype('float').mean()
+df['peak-rpmr']=df['peak-rpm'].replace(np.nan,m)
+m=df['price'].astype('float').mean()
+df['price']=df['price'].replace(np.nan,m)
+df.isnull().sum()
